@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "title": "task",
+      "completed": true,
+      "id": "6f6bfc8f-37de-44e6-8b2d-8309d18e1ea3"
+    },
+    {
+      "title": "batu",
+      "completed": false,
+      "id": "2672bf35-bf0c-42d8-84af-8d151c31237e"
+    },
+    {
+      "title": "batu",
+      "completed": false,
+      "id": "c4c512f3-ed59-4c0f-a884-6d87ef0fc8bf"
+    },
+    {
+      "title": "asd",
+      "completed": true,
+      "id": "5201b2de-e1de-42cd-94c4-ce3a47411547"
+    }
+  ]
+}
