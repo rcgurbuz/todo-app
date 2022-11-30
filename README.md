@@ -1,93 +1,94 @@
-# Getting Started with Create React App
+<h1 align="center">Todo App</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+<br>
 
-## Available Scripts
+The full project requirements can be found below.
 
-In the project directory, you can run:
+## Built With
 
-### `yarn start`
+- TypeScript
+- React
+- Redux-Saga
+- Material UI
+- Styled Components
+- Json Server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Folder Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+App --
+components => App shared components <br/>
+config => Configs used in the app <br/>
+services => endpoints and apis<br/>
+store => global stores (Reux, Context API etc.)<br/>
+pages => main part of app <br/>
+theme => style customization, styled component config.<br/>
+utils => utils used in the app.<br/>
 
-### `yarn test`
+Server--
+server=> backend for storing data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Components
 
-### `yarn build`
+Components are the main tiny part of pages.You can find unique Components.Every component has also its own styled.ts file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Theming
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can create and theme object and thanks to styled component ThemeProvider , we can use as prop in components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+   font-size: ${({ theme }) => theme.fontSizes.x5Large};
 
-### `yarn eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Store
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Redux is used for state management.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Services
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Services are composed of two main part api which is used to create instance and endpoints.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Clone the repository to your local machine
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+$ --https://github.com/rcgurbuz/todo-app.git
+```
 
-# Getting Started with Create React App
+> cd into the directory, install dependencies, build and start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```sh
+$ cd todo-app
+$ npm
+$ npm start
 
-## Available Scripts
+$ cd server
+$ npm
+$ npm run develop
 
-In the project directory, you can run:
+```
 
-### `yarn start`
+> Open `http://127.0.0.1:4000` using your favourite broswer, if it doesn't open automatically.
+> and npm start.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Author
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+👤 **Rıfat Can Gürbüz**
 
-### `yarn test`
+## 🤝 Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rcgurbuz/market-app
+/issues).
 
-### `yarn build`
+1. Fork it (https://github.com/rcgurbuz/market-app.git/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Show your support
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Give a ⭐️ if you like this project!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
-
-To learn React, check out the [React documentation](https://reactjs.org/)
+- Github: [@rcgurbuz](https://github.com/rcgurbuz)
