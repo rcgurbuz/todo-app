@@ -81,7 +81,7 @@ $ npm run develop
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rcgurbuz/market-app
 /issues).
 
-1. Fork it (https://github.com/rcgurbuz/market-app.git/fork)
+1. Fork it (https://github.com/rcgurbuz/todo-app.git/fork)
 2. Create your working branch (git checkout -b [choose-a-name])
 3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
 4. Push to the branch (git push origin [chosen-name])
