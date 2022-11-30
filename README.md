@@ -9,7 +9,6 @@ The full project requirements can be found below.
 - TypeScript
 - React
 - Redux-Saga
-- Material UI
 - Styled Components
 - Json Server
 
