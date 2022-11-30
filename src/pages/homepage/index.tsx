@@ -1,7 +1,7 @@
 import { Grid } from '../../theme/components';
 import { FC, memo, useEffect } from 'react';
 import { Header, HomePageWrapper } from './home-page.styled';
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@app/store/reducers';
 import { TodosState, TODOS_TYPES } from '../../store/actions';
 import { TodoItem } from './todoItem/todo-item.lazy';
@@ -12,15 +12,11 @@ import { AddItem } from './addItem/add-item.lazy';
 const HomePage: FC = memo(() => {
   const dispatch = useDispatch();
 
-  const { todos } = useSelector<RootState, TodosState>((state) => state?.todos);
+  const { todos } = useSelector<RootState, TodosState>((state) => state?.todos, shallowEqual) ?? {};
 
   useEffect(() => {
     dispatch(GenericActionCreator({ type: TODOS_TYPES.FETCH_TODOS_REQUEST }));
   }, []);
-
-  const handleSelectTodo = (id: number): void => {
-    dispatch(GenericActionCreator({ type: TODOS_TYPES.SET_SELECTED_TODO, payload: id }));
-  };
 
   return (
     <HomePageWrapper>
@@ -28,7 +24,7 @@ const HomePage: FC = memo(() => {
       <Grid gridTemplateColumns='1fr'>
         <AddItem />
         {todos?.map((item: ITodo) => (
-          <div key={item?.id} onClick={() => handleSelectTodo(item?.id)}>
+          <div key={item?.id}>
             <TodoItem id={item?.id} title={item?.title} completed={item?.completed} />
           </div>
         ))}

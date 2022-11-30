@@ -40,6 +40,7 @@ function* createTodoSaga(action: CreateNewTodoRequest) {
         type: TODOS_TYPES.FETCH_TODOS_REQUEST,
       }),
     );
+    window.location.reload();
   } catch (e) {
     yield put(
       GenericActionCreator({
@@ -64,6 +65,7 @@ function* updateTodoSaga(action: UpdateTodoRequest) {
         type: TODOS_TYPES.FETCH_TODOS_REQUEST,
       }),
     );
+    window.location.reload();
   } catch (e) {
     yield put(
       GenericActionCreator({
@@ -89,6 +91,7 @@ function* deleteTodoSaga(action: DeleteTodoRequest) {
         type: TODOS_TYPES.FETCH_TODOS_REQUEST,
       }),
     );
+    window.location.reload();
   } catch (e) {
     yield put(
       GenericActionCreator({

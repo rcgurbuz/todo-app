@@ -1,7 +1,6 @@
-import { TodosState, TODOS_TYPES } from '../../../store/actions';
-import { RootState } from '../../../store/reducers';
+import { TODOS_TYPES } from '../../../store/actions';
 import { FC, memo, useEffect, useState } from 'react';
-import { shallowEqual, useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ITodoItemProps } from './todo-item';
 import { CardWrapper, Text } from './todo-item.styled';
 import Checkbox from '../../../theme/Checkbox';
@@ -11,7 +10,6 @@ import { GenericActionCreator } from '../../../utils';
 const TodoItem: FC<ITodoItemProps> = memo<ITodoItemProps>(({ title, completed, id }: ITodoItemProps) => {
   const dispatch = useDispatch();
 
-  const { selectedTodoId } = useSelector<RootState, TodosState>((state) => state?.todos, shallowEqual) ?? {};
   const [checked, setChecked] = useState<boolean>(false);
 
   useEffect(() => {
@@ -28,7 +26,7 @@ const TodoItem: FC<ITodoItemProps> = memo<ITodoItemProps>(({ title, completed, i
   };
 
   return (
-    <CardWrapper $isSelected={id === selectedTodoId}>
+    <CardWrapper>
       <Checkbox checked={checked} onChange={(e) => handleUpdateTodo(e)} />
       <Text $isChecked={completed}>{title}</Text>
       <TrashIcon onClick={() => handleDeleteTodo()} />

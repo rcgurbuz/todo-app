@@ -13,14 +13,12 @@ export enum TODOS_TYPES {
   DELETE_TODO_REQUEST = 'DELETE_TODO_REQUEST',
   DELETE_TODO_SUCCESS = 'DELETE_TODO_SUCCESS',
   DELETE_TODO_FAILURE = 'DELETE_TODO_FAILURE',
-  SET_SELECTED_TODO = 'SET_SELECTED_TODO',
 }
 
 export interface TodosState {
   loading: boolean;
   todos: ITodo[];
   error: string | null;
-  selectedTodoId?: number;
 }
 
 export interface FetchTodosRequest {
@@ -82,11 +80,6 @@ export type DeleteTodoFailure = {
   payload?: string;
 };
 
-export type SetSelectedTodo = {
-  type: TODOS_TYPES.SET_SELECTED_TODO;
-  payload?: number;
-};
-
 export type TodosActions =
   | FetchTodosRequest
   | FetchTodosSuccess
@@ -99,5 +92,4 @@ export type TodosActions =
   | UpdateTodoFailure
   | DeleteTodoSuccess
   | DeleteTodoRequest
-  | DeleteTodoFailure
-  | SetSelectedTodo;
+  | DeleteTodoFailure;

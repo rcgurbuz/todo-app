@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardWrapper = styled.div<{ $isSelected: boolean }>`
+export const CardWrapper = styled.div`
   padding: ${({ theme }) => theme.padding.x3Large};
 
   border: 1px solid #eee;
