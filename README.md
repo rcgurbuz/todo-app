@@ -78,7 +78,7 @@ $ npm run develop
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rcgurbuz/market-app
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/rcgurbuz/todo-app
 /issues).
 
 1. Fork it (https://github.com/rcgurbuz/todo-app.git/fork)
